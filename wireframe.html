@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="backer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--This is the link for Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--This is the Tailwind CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--This is the standard CSS-->
+    <link rel="stylesheet" href="./public/css/style.css" />
+
+    <title>Memoria the Protectors</title>
+  </head>
+  <body id="bg">
+    <!--The CSS and JS will need to be added via routes instead of the paths listed.  This page is just for us to mock up.  We will then slice this HTML page to Handlebars Main and then each other section to a partial handlebars file-->
+
+    <!--This is the header-->
+    <header id="header" class="header">
+      <h1>
+        <i class="fa-solid fa-dragon"></i>Memoria
+        <span class="itallic"> the Protectors</span>
+      </h1>
+      <div class="icons">
+        <div class="drop-container">
+          <button
+            id="dropdownButton"
+            data-dropdown-toggle="dropdown"
+            class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-lg px-2 py-2.5 text-center inline-flex items-center hamburger"
+            type="button"
+          >
+            <i class="fa-solid fa-bars hamburger"></i>
+          </button>
+        </div>
+        <!--Dark Mode Button-->
+        <button
+          id="dark-mode-button"
+          class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-lg px-2 py-2.5 text-center inline-flex items-center hamburger"
+          type="button"
+        >
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="logo">
+        <img
+          src="./public/assets/images/webpage/Memoria The Protectors - Logo no background.png"
+          alt="logo"
+        />
+      </div>
+      <!-- Dropdown menu items-->
+      <div
+        id="dropdown"
+        class="z-10 hidden bg-white divide-y dropdown divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+      >
+        <ul
+          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownDefaultButton"
+        >
+          <li>
+            <a
+              href="/home"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/dashboard"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="/features"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="logIn"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >Log In</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!--This is the intro paragraph mock up-->
+      <!-- <div class="container">
+        <div class="card">
+          <h2>Content Title</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+            repudiandae repellendus dolorem. Incidunt eos minima modi
+            voluptatibus perferendis iste architecto nemo enim hic consequatur.
+            Iure provident cupiditate dolores repudiandae in.
+          </p>
+        </div>
+      </div> -->
+      <!--This starts the gallery of races-->
+      <h2 class="title">Play from a variety of unique Races!</h2>
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 13</div>
+          <div class="racetext">Brinx</div>
+          <img
+            src="./public/assets/images/races/Brinx.JPG"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 13</div>
+          <div class="racetext">Djinni</div>
+
+          <img
+            src="./public/assets/images/races/Djinni.JPG"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 13</div>
+          <div class="racetext">Dwarn</div>
+
+          <img
+            src="./public/assets/images/races/Dwarn.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 13</div>
+          <div class="racetext">Elv</div>
+
+          <img
+            src="./public/assets/images/races/Elves.JPG"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 13</div>
+          <div class="racetext">Human</div>
+
+          <img
+            src="./public/assets/images/races/Humans.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 13</div>
+          <div class="racetext">Musculus</div>
+
+          <img
+            src="./public/assets/images/races/Musculus.JPG"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">7 / 13</div>
+          <div class="racetext">Polkan</div>
+
+          <img
+            src="./public/assets/images/races/Polkans (2).jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">8 / 13</div>
+          <div class="racetext">Potec</div>
+
+          <img
+            src="./public/assets/images/races/Potec (2).JPG"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">9 / 13</div>
+          <div class="racetext">Ryderz</div>
+
+          <img
+            src="./public/assets/images/races/Ryderz.JPG"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">10 / 13</div>
+          <div class="racetext">Skorc</div>
+
+          <img
+            src="./public/assets/images/races/Skorc.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">11 / 13</div>
+          <div class="racetext">Treeton</div>
+
+          <img
+            src="./public/assets/images/races/Treeton.JPG"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">12 / 13</div>
+          <div class="racetext">Tunkles</div>
+
+          <img
+            src="./public/assets/images/races/Tunkles.jpeg"
+            style="width: 100%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">13 / 13</div>
+          <div class="racetext">Wereman</div>
+
+          <img
+            src="./public/assets/images/races/Wereman.jpg"
+            style="width: 100%"
+          />
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <a href="/map">
+        <h2 class="title">Explore distant lands!</h2>
+      </a>
+
+      <a href="/features">
+        <h2 class="title">Become the Ultimate Protector!</h2>
+      </a>
+
+      <button class="start">Get Started</button>
+    </main>
+
+    <footer id="footer" class="copyright">
+      <h2 class="">
+        <i class="fa-regular fa-copyright"></i> All Rights Reserved 2023 Ryan
+        Fann
+      </h2>
+    </footer>
+
+    <div>
+      <h3>The Web Development Team:</h3>
+      <div class="contacts">
+        <a href="https://github.com/8BitGinger/studentPortfolio/">
+          <img
+            class="headshot"
+            src="./public/assets/images/webpage/headshot-80sback.png"
+            alt="Ryan Fann Headshot"
+          />
+        </a>
+
+        <a href="#">
+          <img class="headshot" src="" alt="Luis Flores Headshot" />
+        </a>
+
+        <a href="#">
+          <img class="headshot" src="" alt="Noah Lara Headshot" />
+        </a>
+      </div>
+    </div>
+
+    <!--This is the front end Javascript-->
+    <script src="./public/js/index.js"></script>
+  </body>
+</html>
