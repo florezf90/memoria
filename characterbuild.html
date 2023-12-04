@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>Character Builder</title>
+  </head>
+  <body>
+    <main>
+      <form action="" class="form-container">
+        <label for="char-name">Character Name</label>
+        <input type="text" id="char-name" />
+        <label for="race">Race</label>
+        <select name="race" id="char-race">
+          <option value="brinx">Brinx</option>
+          <option value="djinni">Djinni</option>
+          <option value="dwarn">Dwarn</option>
+          <option value="elv">Elv</option>
+          <option value="human">Human</option>
+          <option value="musculus">Musculus</option>
+          <option value="polkan">Polkan</option>
+          <option value="potec">Potec</option>
+          <option value="ryderz">Ryderz</option>
+          <option value="skorc">Skorc</option>
+          <option value="treeton">Treeton</option>
+          <option value="tunkles">Tunkles</option>
+          <option value="wereman">Wereman</option>
+        </select>
+        <label for="char-age">Age</label>
+        <input type="text" id="char-age" />
+        <label for="char-origin">Origin</label>
+        <select name="origin" id="char-origin">
+          <option value="body">Body</option>
+          <option value="mind">Mind</option>
+          <option value="divine">Divine</option>
+          <option value="eye">Eye</option>
+        </select>
+        <label for="main-focus">Main Focus</label>
+        <select name="main-focus" id="main-focus">
+          <option value="light">Light</option>
+          <option value="fire">Fire</option>
+          <option value="air">Air</option>
+          <option value="mind">Mind</option>
+          <option value="body">Body</option>
+          <option value="lightning">Lightning</option>
+          <option value="health">Health</option>
+          <option value="water">Water</option>
+        </select>
+        <label for="char-hp">HP</label>
+        <input type="text" id="char-hp" />
+        <label for="char-lvl">Level</label>
+        <input
+          id="char-lvl"
+          type="number"
+          name="lvl"
+          min="1"
+          max="20"
+          placeholder="0"
+        />
+        <label for="char-jinx">Jinx</label>
+        <input
+          id="char-jinx"
+          type="number"
+          name="jinx"
+          min="5"
+          max="100"
+          placeholder="5"
+        />
+        <label for="char-stats">Stats</label>
+        <div class="stats">
+          <fieldset>
+            <label for="stat-str">Strength</label>
+            <input
+              id="stat-str"
+              type="number"
+              name="stat-str"
+              min="0"
+              max="25"
+              placeholder="0"
+            />
+            <label for="stat-rflx">Reflex</label>
+            <input
+              id="stat-rflx"
+              type="number"
+              name="stat-rflx"
+              min="0"
+              max="25"
+              placeholder="0"
+            />
+            <label for="stat-fort">Fortitude</label>
+            <input
+              id="stat-fort"
+              type="number"
+              name="stat-fort"
+              min="0"
+              max="25"
+              placeholder="0"
+            />
+            <label for="stat-int">Intelligence</label>
+            <input
+              id="stat-int"
+              type="number"
+              name="stat-int"
+              min="0"
+              max="25"
+              placeholder="0"
+            />
+            <label for="stat-char">Charisma</label>
+            <input
+              id="stat-char"
+              type="number"
+              name="stat-char"
+              min="0"
+              max="25"
+              placeholder="0"
+            />
+          </fieldset>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
