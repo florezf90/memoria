@@ -1,11 +1,11 @@
-const { Race } = require('../../memoria-the-protectors/models');
+const { Race } = require('../../memoria/models');
 
 const raceData = [
   {
-    name: 'Brinx',
-    racial_bonus: 'Plus 1 to Charisma',
-    racial_negs: 'Minus 2 to Strength',
-    racial_ability: 'Flight Focus Ability',
+    "name": 'Brinx',
+    "racial_bonus": 'Plus 1 to Charisma',
+    "racial_negs": 'Minus 2 to Strength',
+    "racial_ability": 'Flight Focus Ability',
     starting_level: 4,
     hp_bonus: 3,
     starting_jinx: 40,
