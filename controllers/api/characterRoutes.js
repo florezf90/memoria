@@ -48,7 +48,7 @@ router.delete('/:id', withAuth, async(req,res)=>{
       id = req.params.id;
       console.log(`delete request to characersheet`);
       Charactersheet.destroy({ where: { id: id, }, })
-      .then(res.redirect('/dashboard'))
+       .then(res.redirect('/dashboard'))
     } catch (err) {
       res.status(500).json(err);
     }
