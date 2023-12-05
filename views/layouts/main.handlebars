@@ -1,29 +1,4 @@
-<html lang='en' class='backer'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <!--This is the link for Font Awesome-->
-    <link
-      rel='stylesheet'
-      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'
-      integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=='
-      crossorigin='anonymous'
-      referrerpolicy='no-referrer'
-    />
 
-    <!--This is the Tailwind CSS-->
-    <link
-      rel='stylesheet'
-      href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css'
-      referrerpolicy='no-referrer'
-    />
-
-    <!--This is the standard CSS-->
-    <link rel='stylesheet' href='/css/style.css' />
-
-    <title>Memoria the Protectors</title>
-  </head>
-  <body id='bg'>
 <!DOCTYPE html>
 <html lang="en" class="backer">
   <head>
@@ -39,90 +14,39 @@
     />
 
     <!--This is the Tailwind CSS-->
-
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!--This is the standard CSS-->
-    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
-    <title>Memoria the Protectors</title>
+    <title> Memoria the Protectors</title>
   </head>
-  <body id="bg">
-    <!--The CSS and JS will need to be added via routes instead of the paths listed.  This page is just for us to mock up.  We will then slice this HTML page to Handlebars Main and then each other section to a partial handlebars file-->
-
-    <!--This is the header-->
-    <header id="header" class="header">
-      <h1>
-        <i class="fa-solid fa-dragon"></i>Memoria
-        <span class="itallic"> the Protectors</span>
-      </h1>
-      <div class="icons">
-        <div class="drop-container">
-          <button
-            id="dropdownButton"
-            data-dropdown-toggle="dropdown"
-            class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-lg px-2 py-2.5 text-center inline-flex items-center hamburger"
-            type="button"
-          >
-            <i class="fa-solid fa-bars hamburger"></i>
-          </button>
-        </div>
-        <!--Dark Mode Button-->
-        <button
-          id="dark-mode-button"
-          class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-lg px-2 py-2.5 text-center inline-flex items-center hamburger"
-          type="button"
-        >
-          <i class="fa-solid fa-circle-half-stroke"></i>
-        </button>
-      </div>
-    </header>
-
+<body class="bg-gradient-to-r from-red-200 via-yellow-300 to-green-500 text-black font-sans bg">
+<!-- component -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="w-full text-white bg-black bg-opacity-100 ">
+  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div class="p-4 flex flex-row items-center justify-between">
+      <a href="/" class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Memoria of the Protectors</a>
+      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/">Home</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#about">About</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Team</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/login">Login</a> 
+      {{#if loggedin}}
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" id="logout" href="/login">Logout</a> 
+{{/if}}
   
-      <!-- Dropdown menu items-->
-      <div
-        id="dropdown"
-        class="z-10 hidden bg-white divide-y dropdown divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-      >
-        <ul
-          class="py-2 text-sm text-gray-700 dark:text-gray-200"
-          aria-labelledby="dropdownDefaultButton"
-        >
-          <li>
-            <a
-              href="/"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="/dashboard"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Dashboard</a
-            >
-          </li>
-          <li>
-            <a
-              href="/features"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Features</a
-            >
-          </li>
-          <li>
-            <a
-              href="/about"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="logIn"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >Log In</a
-            >
-          </li>
-        </ul>
-      </div>
+    </nav>
+  </div>
+</div>
+
 
       {{{body}}}
 
@@ -134,7 +58,9 @@
       </h2>
     </footer>
 
+
     <!--This is the front end Javascript-->
     <script src="/js/index.js"></script>
+    <script src="/js/logout.js"></script>
   </body>
 </html>
