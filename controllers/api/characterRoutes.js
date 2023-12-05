@@ -27,28 +27,13 @@ router.post("/", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-//gets all characters for user signed in
-router.get('/', withAuth, async (req, res) => {
-    try {
-      console.log('get request to charactersheet');
-      const charactersheetData = await Charactersheet.findAll({
-        where: {user_id: req.session.user_id}
-      });
-      const charactersheets = charactersheetData.map((charactersheet) => charactersheet.get({ plain: true }));
-      res.render('/*TODO add handlebar view name*/', {
-        charactersheets,
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-});
+
 //deletes a particular character
 router.delete('/:id', withAuth, async(req,res)=>{
     try{
       id = req.params.id;
       console.log(`delete request to characersheet`);
-      Charactersheet.destroy({ where: { id: id, }, })
-       .then(res.redirect('/dashboard'))
+      Charactersheet.destroy({ where: { id: id, }, });
     } catch (err) {
       res.status(500).json(err);
     }
