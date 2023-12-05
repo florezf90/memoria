@@ -1,4 +1,4 @@
-const sequelize = require('../../memoria-the-protectors/config/connection');
+const sequelize = require('../../memoria/config/connection');
 
 const seedUser = require('./user-routes');
 

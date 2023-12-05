@@ -1,4 +1,4 @@
-const { User } = require('../../memoria-the-protectors/models');
+const { User } = require('../../memoria/models');
 
 const userData =[
   {

@@ -8,11 +8,11 @@ Origin.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
+      primaryKey: true,
       allowNull: false,
     },
     level_1_advantage: {
@@ -55,55 +55,15 @@ Origin.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    level_11_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_12_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_13_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_14_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_15_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_16_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_17_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_18_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_19_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    level_20_advantage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    weapon_training: {
+    weapon_proficiency: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     starting_package: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-  },
+    }
+},
 
   {
     sequelize,
