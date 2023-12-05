@@ -57,7 +57,7 @@ router.post("/", async (req, res) => {
       logged_in: (req.session.logged_in = true),
     });
 
-    // res.status(200).json(userData).redirect("/login");
+    //TODO make redirect to home or dashboard after login -- res.status(200).json(userData).redirect("/login");
     res
       .status(200)
       .json({ message: "User registered successfully!!", userData });

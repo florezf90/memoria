@@ -10,9 +10,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Character extends Model {}
+class Charactersheet extends Model {}
 
-Character.init({
+Charactersheet.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -26,10 +26,10 @@ Character.init({
   race: {
     type: DataTypes.STRING,
     allowNull: false,
-    references: {
-      model: "race",
-      key: "name",
-    },
+    // references: {
+    //   model: "race",
+    //   key: "name",
+    // },
   },
   age: {
     type: DataTypes.INTEGER,
@@ -38,18 +38,18 @@ Character.init({
   origin: {
     type: DataTypes.STRING,
     allowNull: false,
-    references: {
-      model: "origin",
-      key: "name",
-    },
+    // references: {
+    //   model: "origin",
+    //   key: "name",
+    // },
   },
   main_focus: {
     type: DataTypes.STRING,
     allowNull: false,
-    references: {
-      model: "focus",
-      key: "title",
-    },
+    // references: {
+    //   model: "focus",
+    //   key: "title",
+    // },
   },
   HP: {
     type: DataTypes.INTEGER,
@@ -63,4 +63,22 @@ Character.init({
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-});
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "user",
+      key: "id",
+    },
+  }
+},
+{
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: "charactersheet",
+}
+);
+
+module.exports = Charactersheet;
