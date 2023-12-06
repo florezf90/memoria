@@ -37,17 +37,17 @@
       </button>
     </div>
     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/">Home</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/#about">About</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/#team">Team</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 hover:text-black focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/">Home</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 hover:text-black focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/#about">About</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 hover:text-black focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/#team">Team</a>
 
         {{#unless loggedin}}
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/login">Login</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 hover:text-black focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/login">Login</a>
          {{/unless}}
 
       {{#if loggedin}}
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" id="dashboard" href="/dashboard">dashboard</a> 
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" id="logout" href="/login">Logout</a> 
+            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 hover:text-black focus:bg-gray-200 focus:outline-none focus:shadow-outline" id="dashboard" href="/dashboard">dashboard</a> 
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg :text-gray-900 hover:bg-gray-200 focus:bg-gray-200  hover:text-black focus:outline-none focus:shadow-outline" id="logout" href="/login">Logout</a> 
 {{/if}}
   
     </nav>

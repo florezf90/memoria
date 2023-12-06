@@ -14,22 +14,11 @@ router.get('/', withAuth, async (req, res) => {
       });
       const charactersheets = charactersheetData.map((charactersheet) => charactersheet.get({ plain: true }));
       console.log(charactersheets);
-      const focusData = await Focus.findAll();
-        const focuses = focusData.map((focus) => focus.get({ plain: true }));
-
-        const originData = await Origin.findAll();
-        const origins = originData.map((origin) => origin.get({ plain: true }));
-
-        const raceData = await Race.findAll();
-        const races = raceData.map((race) => race.get({ plain: true }));
      
         res.status(200).render("dashboard", {
         charactersheets,
-        races,
-        origins,
-        focuses,
         loggedin: req.session.logged_in
-        }, );
+        });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -48,11 +37,11 @@ router.get('/new-character', withAuth, async (req, res) => {
         const races = raceData.map((race) => race.get({ plain: true }));
      
         res.status(200).render("testchar", {
-        races,
-        origins,
-        focuses,
-        loggedin: req.session.logged_in
-        }, );
+          races,
+          origins,
+          focuses,
+          loggedin: req.session.logged_in,
+        });
     } catch (err) {
       res.status(500).json(err);
     }
