@@ -83,7 +83,7 @@ Charactersheet.init({
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  tntelligence: {
+  intelligence: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
