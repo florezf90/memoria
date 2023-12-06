@@ -8,12 +8,18 @@ const addCharacter = async(event)=>{
     const HP = document.querySelector("#HP").value;
     const level = document.querySelector("#level").value;
     const jinx = document.querySelector("#jinx").value;
-    console.log(name,race, age, origin, main_focus, HP, level, jinx);
+    const strength = document.querySelector("#strength").value;
+    const reflex = document.querySelector("#reflex").value;
+    const fortitude = document.querySelector("#fortitude").value;
+    const intelligence = document.querySelector("#intelligence").value;
+    const charisma = document.querySelector("#charisma").value;
 
-    if(name&& race&& age && origin && main_focus && HP && level && jinx){
+    console.log(name,race, age, origin, main_focus, HP, level, jinx, strength, reflex, fortitude, intelligence, charisma);
+
+    if(name&& race&& age && origin && main_focus && HP && level && jinx && strength && reflex && fortitude && intelligence && charisma){
         const response = await fetch('/api/character/', {
         method: 'POST',
-        body: JSON.stringify({ name:name, race:race, age:age, origin:origin, main_focus:main_focus, HP:HP, level:level, jinx:jinx }),
+        body: JSON.stringify({ name:name, race:race, age:age, origin:origin, main_focus:main_focus, HP:HP, level:level, jinx:jinx, strength:strength, reflex:reflex, fortitude:fortitude, intelligence:intelligence, charisma:charisma }),
         headers: { 'Content-Type': 'application/json' },
         });
     }
