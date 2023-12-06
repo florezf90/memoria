@@ -14,7 +14,7 @@ const addCharacter = async(event)=>{
     const intelligence = document.querySelector("#intelligence").value;
     const charisma = document.querySelector("#charisma").value;
 
-    console.log(name,race, age, origin, main_focus, HP, level, jinx, strength, reflex, fortitude, intelligence, charisma);
+    console.log(name, race, age, origin, main_focus, HP, level, jinx, strength, reflex, fortitude, intelligence, charisma);
 
     if(name&& race&& age && origin && main_focus && HP && level && jinx && strength && reflex && fortitude && intelligence && charisma){
         const response = await fetch('/api/character/', {

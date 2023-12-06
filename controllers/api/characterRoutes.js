@@ -15,11 +15,11 @@ router.post("/", withAuth, async (req, res) => {
       HP: req.body.HP,
       level: req.body.level,
       jinx: req.body.jinx,
-      strength: req.body.Strength,
-      reflex: req.body.Reflex,
-      fortitude: req.body.Fortitude,
-      intelligence: req.body.Intelligence,
-      charisma: req.body.Charisma,
+      strength: req.body.strength,
+      reflex: req.body.reflex,
+      fortitude: req.body.fortitude,
+      intelligence: req.body.intelligence,
+      charisma: req.body.charisma,
       user_id: req.session.user_id,
     });
 
