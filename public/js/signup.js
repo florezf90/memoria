@@ -22,7 +22,7 @@ const loginFormHandler = async (event) => {
       const responseData = await response.json();
 
       if (response.ok) {
-        document.location.replace("/");
+        document.location.replace("/login");
         alert("success");
       } else {
         alert(
