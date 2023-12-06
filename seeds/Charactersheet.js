@@ -1,5 +1,5 @@
 const { Charactersheet } = require('../models');
-//TODO
+//TODO put correct data
 const charactersheetData =[
   {
     "id": 1,
@@ -11,7 +11,12 @@ const charactersheetData =[
     "HP": 9000,
     "level": 3,
     "jinx": 1,
-    "user_id": 1
+    "user_id": 1,
+    "strength": 5,
+    "reflex": 5,
+    "fortitude": 5,
+    "tntelligence": 5,
+    "charisma": 5,
   }
 ]
 

@@ -70,7 +70,27 @@ Charactersheet.init({
       model: "user",
       key: "id",
     },
-  }
+  },
+  strength: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  reflex: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  fortitude: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  tntelligence: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  charisma: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 },
 {
   sequelize,
