@@ -15,7 +15,7 @@ const charactersheetData =[
     "strength": 5,
     "reflex": 5,
     "fortitude": 5,
-    "tntelligence": 5,
+    "intelligence": 5,
     "charisma": 5,
   }
 ]
