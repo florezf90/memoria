@@ -286,3 +286,8 @@ div .numbertext {
     transform: translateY(0);
   }
 }
+
+
+ .custom-carousel-height {
+            height: 650px;
+        }
