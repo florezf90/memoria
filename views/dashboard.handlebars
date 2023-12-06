@@ -8,66 +8,90 @@
 </head>
 <body class="font-sans">
 
-
-    <!-- Cards List -->
-<div class="flex flex-col items-center p-4">
-        <!-- Main User Card -->
-        <div class="w-80 bg-white rounded-lg overflow-hidden shadow-md mb-4 my-16 mx-auto">
-            <div class="bg-gray-300 h-40 flex-shrink-0"></div>
-            <div class="p-4 flex-col justify-between items-center">
-                <div class="text-xl font-bold m-3">@username</div>
-                <div class="text-xl font-bold m-3"> Email</div>
-                <button href="/dasboard/new-character" class="bg-blue-500 text-white rounded-md p-4">create new character</button>
-            </div>
+<!-- Cards List -->
+<div class="flex flex-col items-center p-4 max-w-5xl mx-auto">
+    <!-- Main User Card -->
+    <div class="w-80 bg-white rounded-lg overflow-hidden shadow-md mb-4 my-16 mx-auto">
+        <div class="bg-gray-300 h-40 flex-shrink-0"></div>
+        <div class="p-4 flex-col justify-between items-center">
+            <div class="text-xl font-bold m-3">@username</div>
+            <div class="text-xl font-bold m-3">Email</div>
+            <button id="createCharacter" class="bg-blue-500 text-white rounded-md p-4">Create new character</button>
         </div>
+    </div>
 
-        <!-- Card 1 -->
-          <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16">
-            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
-            <div class="p-4 flex justify-between items-center m-6">
-                <div>
-                    <div class="text-xl font-bold mb-2">Character name 1</div>
-                    <ul class="flex space-x-4">
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                    </ul>
-                </div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-md">Delete</button>
+    <!-- Card 1 - Positioned to the far left -->
+    <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16 p-5 transition-transform transform hover:scale-105 ml-0" id="card1">
+        <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
+        <div class="p-4 flex justify-between items-center m-6">
+            <div>
+                <div class="text-xl font-bold mb-2">Character name 1</div>
+                <ul class="flex space-x-4">
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
             </div>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 hover:text-gray-100 transition duration-300 delete-btn">Delete</button>
         </div>
+    </div>
 
-        <!-- Card 2 -->
-        <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16">
-            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
-            <div class="p-4 flex justify-between items-center m-6">
-                <div>
-                    <div class="text-xl font-bold mb-2">Character name 2</div>
-                    <ul class="flex space-x-4">
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                    </ul>
-                </div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-md">Delete</button>
+    <!-- Card 2 - Centered (Already centered by default) -->
+    <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16 p-5 transition-transform transform hover:scale-105" id="card2">
+        <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
+        <div class="p-4 flex justify-between items-center m-6">
+            <div>
+                <div class="text-xl font-bold mb-2">Character name 2</div>
+                <ul class="flex space-x-4">
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
             </div>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 hover:text-gray-100 transition duration-300 delete-btn">Delete</button>
         </div>
+    </div>
 
-        <!-- Card 3 -->
-         <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16">
-            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
-            <div class="p-4 flex justify-between items-center m-6">
-                <div>
-                    <div class="text-xl font-bold mb-2">Character name 3</div>
-                    <ul class="flex space-x-4">
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                    </ul>
-                </div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-md">Delete</button>
+    <!-- Card 3 - Positioned to the far right -->
+    <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16 p-5 transition-transform transform hover:scale-105" id="card3">
+        <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
+        <div class="p-4 flex justify-between items-center m-6">
+            <div>
+                <div class="text-xl font-bold mb-2">Character name 3</div>
+                <ul class="flex space-x-4">
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
             </div>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 hover:text-gray-100 transition duration-300 delete-btn">Delete</button>
         </div>
+    </div>
+
+    <script>
+        // JavaScript to handle button clicks
+        document.getElementById('createCharacter').addEventListener('click', function() {
+            window.location.href = '/dashboard/new-character';
+        });
+
+        var deleteButtons = document.getElementsByClassName('delete-btn');
+        Array.from(deleteButtons).forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Add fade-out effect before removing the card
+                var cardId = this.parentNode.parentNode.id;
+                var card = document.getElementById(cardId);
+                card.style.transition = 'opacity 0.5s';
+                card.style.opacity = 0;
+
+                // Simulate a delay before actually removing the card
+                setTimeout(() => {
+                    card.remove();
+                }, 500);
+            });
+        });
+    </script>
+
+</div>
 
 </body>
 </html>
