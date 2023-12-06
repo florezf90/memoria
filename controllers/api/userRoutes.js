@@ -54,10 +54,10 @@ router.post("/", async (req, res) => {
       username: req.body.name,
       email: req.body.email,
       password: req.body.password,
-      logged_in: (req.session.logged_in = true),
+      logged_in: (req.session.logged_in = false),
     });
 
-    // res.status(200).json(userData).redirect("/login");
+    //TODO make redirect to home or dashboard after login -- res.status(200).json(userData).redirect("/login");
     res
       .status(200)
       .json({ message: "User registered successfully!!", userData });

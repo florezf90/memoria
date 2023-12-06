@@ -1,0 +1,20 @@
+<div id="character-list">
+{{#each charactersheets as |charactersheet|}}
+<div id="character-div" class="border-solid border-2 border-indigo-600">
+<span>{{charactersheet.name}},  {{charactersheet.race}}, {{charactersheet.level}},  {{charactersheet.age}}, {{charactersheet.origin}} </span>    <button id="delete-char-btn" data-id="{{charactersheet.id}}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">delete</button>
+</div>
+{{/each}}
+</div>
+<div id="create-char">
+    <h1>new character</h1>
+    <input type="text" id="name" placeholder="name"></br>
+    <input type="text" id="race" placeholder="race"></br>
+    <input type="text" id="age" placeholder="age"></br>
+    <input type="text" id="origin" placeholder="origin"></br>
+    <input type="text" id="main_focus" placeholder="main_focus"></br>
+    <input type="text" id="HP" placeholder="HP"></br>
+    <input type="text" id="level" placeholder="level"></br>
+    <input type="text" id="jinx" placeholder="jinx"></br>
+    <button id="create-char-btn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">create new character</button>
+</div>
+<script src="/js/character.js"/>

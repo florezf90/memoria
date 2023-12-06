@@ -1,63 +1,76 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Race extends Model {}
+class Origin extends Model {}
 
-Race.init(
+Origin.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
+      primaryKey: true,
       allowNull: false,
     },
-    racial_bonus: {
+    level_1_advantage: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    racial_negs: {
+    level_2_advantage: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    racial_ability: {
+    level_3_advantage: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    starting_level: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    hp_bonus: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    starting_jinx: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    attack_prowess: {
+    level_4_advantage: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    defense_prowess: {
+    level_5_advantage: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    image: {
+    level_6_advantage: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-  },
+    level_7_advantage: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    level_8_advantage: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    level_9_advantage: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    level_10_advantage: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    weapon_proficiency: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    starting_package: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
+},
+
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'race',
+    modelName: 'origin',
   }
 );
 
-module.exports = Race;
+module.exports = Origin;
