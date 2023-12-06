@@ -15,59 +15,32 @@
         <div class="w-80 bg-white rounded-lg overflow-hidden shadow-md mb-4 my-16 mx-auto">
             <div class="bg-gray-300 h-40 flex-shrink-0"></div>
             <div class="p-4 flex-col justify-between items-center">
-                <div class="text-xl font-bold m-3">@username</div>
-                <div class="text-xl font-bold m-3"> Email</div>
-                <button href="/dasboard/new-character" class="bg-blue-500 text-white rounded-md p-4">create new character</button>
+                <div class="text-xl font-bold m-3">@{{charactersheets.[0].user.username}}</div>
+                <div class="text-xl font-bold m-3"> {{charactersheets.[0].user.email}}</div>
+                <button onclick="location.href='/dashboard/new-character';" class="bg-blue-500 text-white rounded-md p-4">create new character</button>
             </div>
         </div>
-
-        <!-- Card 1 -->
+</div>
+<div id="character-list">
+        {{#each charactersheets as |charactersheet|}}
           <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16">
-            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
+            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6">
+                <image src="/assets/races/{{charactersheet.race.image}}" alt="image of {{charactersheet.race.name}}"></image>
+            </div>
             <div class="p-4 flex justify-between items-center m-6">
                 <div>
-                    <div class="text-xl font-bold mb-2">Character name 1</div>
+                    <div class="text-xl font-bold mb-2">{{charactersheet.name}}</div>
                     <ul class="flex space-x-4">
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
+                        <li>{{charactersheet.race.name}}</li>
+                        <li>{{charactersheet.origin.name}}</li>
+                        <li>{{charactersheet.focu.title}}</li>
                     </ul>
                 </div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-md">Delete</button>
+                <button class="bg-red-500 text-white px-4 py-2 rounded-md" id="delete-char-btn" data-id="{{charactersheet.id}}">Delete</button>
             </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16">
-            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
-            <div class="p-4 flex justify-between items-center m-6">
-                <div>
-                    <div class="text-xl font-bold mb-2">Character name 2</div>
-                    <ul class="flex space-x-4">
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                    </ul>
-                </div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-md">Delete</button>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-         <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16">
-            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6"></div>
-            <div class="p-4 flex justify-between items-center m-6">
-                <div>
-                    <div class="text-xl font-bold mb-2">Character name 3</div>
-                    <ul class="flex space-x-4">
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                    </ul>
-                </div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-md">Delete</button>
-            </div>
-        </div>
-
+        {{/each}}
+</div>
 </body>
+<script src="/js/character.js"/>
 </html>

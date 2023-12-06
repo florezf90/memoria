@@ -11,20 +11,20 @@
     <select name="race" id="race">
         <option value="" disabled selected hidden>Choose race</option>
         {{#each races as |race|}}
-                <option value= "{{race.id}}" >{{race.name}}</option>
+                <option value= "{{race.race_id}}" >{{race.name}}</option>
         {{/each}}
     </select></br>
     <input type="text" id="age" placeholder="age"></br>
     <select name="origin" id="origin">
         <option value="" disabled selected hidden>Choose origin</option>
         {{#each origins as |origin|}}
-                <option value= "{{origin.id}}" >{{origin.name}}</option>
+                <option value= "{{origin.origin_id}}" >{{origin.name}}</option>
         {{/each}}
     </select></br>
     <select name="main_focus" id="main_focus">
         <option value="" disabled selected hidden>Choose focus</option>
         {{#each focuses as |focus|}}
-                <option value= "{{focus.id}}" >{{focus.title}}</option>
+                <option value= "{{focus.focus_id}}" >{{focus.title}}</option>
         {{/each}}
     </select></br>
     <input type="text" id="HP" placeholder="HP"></br>

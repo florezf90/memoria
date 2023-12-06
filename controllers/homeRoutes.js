@@ -27,9 +27,4 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.get("/dashboard", withAuth, (req, res) => {
-  res.render("dashboard", { loggedin: req.session.logged_in } );
-});
-
-
 module.exports = router;
