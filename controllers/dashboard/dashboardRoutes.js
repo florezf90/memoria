@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 //gets all characters for user signed in
 //TODO makde reload page or redirect to dashboard to reflect changes made
-router.get('/', withAuth, async (req, res) => {
+router.get('/new-character', withAuth, async (req, res) => {
     try {
       console.log('get request to charactersheet');
       const charactersheetData = await Charactersheet.findAll({
