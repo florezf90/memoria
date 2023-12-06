@@ -41,10 +41,11 @@ router.get('/new-character', withAuth, async (req, res) => {
         const races = raceData.map((race) => race.get({ plain: true }));
      
         res.status(200).render("testchar", {
-        charactersheets,//for getting characters DELETE IF TRANSFER TO SEPERATE PAGE<-
-        races,
-        origins,
-        focuses
+          charactersheets, //for getting characters DELETE IF TRANSFER TO SEPERATE PAGE<-
+          races,
+          origins,
+          focuses,
+          loggedin: req.session.logged_in,
         });
     } catch (err) {
       res.status(500).json(err);
