@@ -2,7 +2,8 @@ const sequelize = require('../../memoria/config/connection');
 
 const seedUser = require('./user-routes');
 const seedCharactersheet = require('./Charactersheet')
-
+const seedOrigin = require('./origin');
+const seedFocus = require('./focus');
 const seedRace = require('./race');
 
 const seedDatabase = async () => {
@@ -10,10 +11,14 @@ const seedDatabase = async () => {
   
     await seedUser();
 
-    await seedCharactersheet();
-  
     await seedRace();
 
+    await seedFocus();
+
+    await seedOrigin();
+
+    await seedCharactersheet();
+  
     process.exit(0);
 };
 

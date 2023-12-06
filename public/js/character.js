@@ -19,9 +19,13 @@ const addCharacter = async(event)=>{
     if(name&& race&& age && origin && main_focus && HP && level && jinx && strength && reflex && fortitude && intelligence && charisma){
         const response = await fetch('/api/character/', {
         method: 'POST',
-        body: JSON.stringify({ name:name, race:race, age:age, origin:origin, main_focus:main_focus, HP:HP, level:level, jinx:jinx, strength:strength, reflex:reflex, fortitude:fortitude, intelligence:intelligence, charisma:charisma }),
+        body: JSON.stringify({ name:name, race_id:race, age:age, origin_id:origin, main_focus_id:main_focus, HP:HP, level:level, jinx:jinx, strength:strength, reflex:reflex, fortitude:fortitude, intelligence:intelligence, charisma:charisma }),
         headers: { 'Content-Type': 'application/json' },
         });
+
+        if (response.ok) {
+            document.location.reload();
+          }
     }
 }
 
@@ -34,6 +38,10 @@ const deleteCharacter = async(event)=>{
         body: JSON.stringify({ id:id }),
         headers: { 'Content-Type': 'application/json' },
         });
+    
+        if (response.ok) {
+            document.location.reload();
+          }
     }
 }
 

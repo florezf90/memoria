@@ -14,7 +14,7 @@ FocusPower.init(
         focus_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'focusCategory',
+                model: 'focus',
                 key: 'id',
             },
         },
@@ -24,7 +24,7 @@ FocusPower.init(
         },
         description: {
             type: DataTypes.STRING,
-            allowNull: false, //TODO check this to see if false is correct i just filled in to make work
+            allowNull: false,
         },
     },
     {

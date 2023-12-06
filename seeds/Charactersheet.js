@@ -1,13 +1,12 @@
 const { Charactersheet } = require('../models');
-//TODO put correct data
 const charactersheetData =[
   {
     "id": 1,
     "name": "Tim the wizard",
-    "race": "human",
+    "race_id": 1,
     "age": 23,
-    "origin": "memoria",
-    "main_focus": "sword",
+    "origin_id": 1,
+    "main_focus_id": 1,
     "HP": 9000,
     "level": 3,
     "jinx": 1,
