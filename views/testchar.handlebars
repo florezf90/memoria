@@ -1,17 +1,32 @@
 <div id="character-list">
 {{#each charactersheets as |charactersheet|}}
 <div id="character-div" class="border-solid border-2 border-indigo-600">
-<span>{{charactersheet.name}},  {{charactersheet.race}}, {{charactersheet.level}},  {{charactersheet.age}}, {{charactersheet.origin}} </span>    <button id="delete-char-btn" data-id="{{charactersheet.id}}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">delete</button>
+<span>{{charactersheet.name}},  {{charactersheet.race_id}}, {{charactersheet.level}},  {{charactersheet.age}}, {{charactersheet.origin_id}} </span>    <button id="delete-char-btn" data-id="{{charactersheet.id}}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">delete</button>
 </div>
 {{/each}}
 </div>
 <div id="create-char">
     <h1>new character</h1>
     <input type="text" id="name" placeholder="name"></br>
-    <input type="text" id="race" placeholder="race"></br>
+    <select name="race" id="race">
+        <option value="" disabled selected hidden>Choose race</option>
+        {{#each races as |race|}}
+                <option value= "{{race.id}}" >{{race.name}}</option>
+        {{/each}}
+    </select></br>
     <input type="text" id="age" placeholder="age"></br>
-    <input type="text" id="origin" placeholder="origin"></br>
-    <input type="text" id="main_focus" placeholder="main_focus"></br>
+    <select name="origin" id="origin">
+        <option value="" disabled selected hidden>Choose origin</option>
+        {{#each origins as |origin|}}
+                <option value= "{{origin.id}}" >{{origin.name}}</option>
+        {{/each}}
+    </select></br>
+    <select name="main_focus" id="main_focus">
+        <option value="" disabled selected hidden>Choose focus</option>
+        {{#each focuses as |focus|}}
+                <option value= "{{focus.id}}" >{{focus.title}}</option>
+        {{/each}}
+    </select></br>
     <input type="text" id="HP" placeholder="HP"></br>
     <input type="text" id="level" placeholder="level"></br>
     <input type="text" id="jinx" placeholder="jinx"></br>

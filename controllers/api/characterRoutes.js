@@ -8,10 +8,10 @@ router.post("/", withAuth, async (req, res) => {
     console.log("Saving New Character");
     const userData = await Charactersheet.create({
       name: req.body.name,
-      race: req.body.race,
+      race_id: req.body.race_id,
       age: req.body.age,
-      origin: req.body.origin,
-      main_focus: req.body.main_focus,
+      origin_id: req.body.origin_id,
+      main_focus_id: req.body.main_focus_id,
       HP: req.body.HP,
       level: req.body.level,
       jinx: req.body.jinx,
@@ -23,7 +23,6 @@ router.post("/", withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
-    //TODO make redirect to dashboard after save -- res.status(200).redirect("/login");
     res
       .status(200)
       .json({ message: "character registered successfully!!", userData });
@@ -38,7 +37,8 @@ router.delete('/:id', withAuth, async(req,res)=>{
     try{
       id = req.params.id;
       console.log(`delete request to characersheet`);
-      Charactersheet.destroy({ where: { id: id, }, });
+      const data = Charactersheet.destroy({ where: { id: id, }, });
+      res.status(200).json(data);
     } catch (err) {
       res.status(500).json(err);
     }

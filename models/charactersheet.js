@@ -23,33 +23,33 @@ Charactersheet.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
-  race: {
-    type: DataTypes.STRING,
+  race_id: {
+    type: DataTypes.INTEGER,
     allowNull: false,
-    // references: {
-    //   model: "race",
-    //   key: "name",
-    // },
+    references: {
+      model: "race",
+      key: "id",
+    },
   },
   age: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  origin: {
-    type: DataTypes.STRING,
+  origin_id: {
+    type: DataTypes.INTEGER,
     allowNull: false,
-    // references: {
-    //   model: "origin",
-    //   key: "name",
-    // },
+    references: {
+      model: "origin",
+      key: "id",
+    },
   },
-  main_focus: {
-    type: DataTypes.STRING,
+  main_focus_id: {
+    type: DataTypes.INTEGER,
     allowNull: false,
-    // references: {
-    //   model: "focus",
-    //   key: "title",
-    // },
+    references: {
+      model: "focus",
+      key: "id",
+    },
   },
   HP: {
     type: DataTypes.INTEGER,
@@ -62,14 +62,6 @@ Charactersheet.init({
   jinx: {
     type: DataTypes.INTEGER,
     allowNull: false,
-  },
-  user_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: "user",
-      key: "id",
-    },
   },
   strength: {
     type: DataTypes.INTEGER,
@@ -90,6 +82,14 @@ Charactersheet.init({
   charisma: {
     type: DataTypes.INTEGER,
     allowNull: false,
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "user",
+      key: "id",
+    },
   },
 },
 {

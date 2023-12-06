@@ -9,7 +9,7 @@ Focus.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autiIncrement: true,
+            autoIncrement: true,
         },
         title: {
             type: DataTypes.STRING,

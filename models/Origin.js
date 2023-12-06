@@ -9,10 +9,11 @@ Origin.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
+      primaryKey: true,
+
     },
     name: {
       type: DataTypes.STRING,
-      primaryKey: true,
       allowNull: false,
     },
     level_1_advantage: {
