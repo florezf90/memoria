@@ -167,7 +167,7 @@ main {
 .prev:hover,
 .next:hover {
   background-color: rgba(74, 74, 74, 0.8);
-  color: rgb(124, 61, 240);
+  color: rgb(61, 118, 240);
 }
 
 /* Caption text */
@@ -175,7 +175,7 @@ main {
   color: rgb(255, 255, 255);
   font-size: 25px;
   font-weight: 600;
-  font-family: "Mooli";
+  font-family: 'Mooli';
   width: 100%;
 }
 
@@ -187,14 +187,14 @@ div .numbertext {
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: rgb(111, 79, 171);
+  color: black;
   font-size: 20px;
   padding: 4px 8px;
   position: absolute;
   bottom: 0;
   right: 0;
   text-align: center;
-  font-family: "Mooli";
+  font-family: 'Mooli';
   opacity: 60%;
 }
 
@@ -226,6 +226,7 @@ div .numbertext {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin: 20px;
 }
 
 .map-label {
