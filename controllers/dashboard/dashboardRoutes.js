@@ -12,8 +12,9 @@ router.get('/new-character', withAuth, async (req, res) => {
         include: [{ model: Origin }, { model: Race }, { model: Focus }],
       });
       const charactersheets = charactersheetData.map((charactersheet) => charactersheet.get({ plain: true }));
-      res.render('testchar', {
+      res.render("testchar", {
         charactersheets,
+        loggedin: req.session.logged_in,
       });
     } catch (err) {
       res.status(500).json(err);
