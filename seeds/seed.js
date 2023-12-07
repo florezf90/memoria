@@ -1,4 +1,4 @@
-const sequelize = require('../../memoria/config/connection');
+const sequelize = require('../config/connection');
 
 const seedUser = require('./user-routes');
 const seedCharactersheet = require('./Charactersheet')
