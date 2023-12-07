@@ -9,8 +9,7 @@ router.get('/', withAuth, async (req, res) => {
       console.log("get request to charactersheet");
       const charactersheetData = await Charactersheet.findAll({
         where: {user_id: req.session.user_id},
-        include: [{ model: Origin }, { model: Race }, { model: Focus }, {model: User}],
-        exclude:["password"]
+        include: [{ model: Origin }, { model: Race }, { model: Focus }, {model: User, attributes:{exclude:['password']}}]
       });
       const charactersheets = charactersheetData.map((charactersheet) => charactersheet.get({ plain: true }));
       console.log(charactersheets);

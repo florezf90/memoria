@@ -1,4 +1,4 @@
-const { Focus } = require('../../memoria/models');
+const { Focus } = require('../models');
 
 const focusData = [
   {
