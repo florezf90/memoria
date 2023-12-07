@@ -22,24 +22,24 @@ FocusPower.belongsTo(Focus, {
 });
 
 Charactersheet.hasOne(Race,{
-    foreignKey:'id'
+    foreignKey:'race_id'
 })
 Race.belongsTo(Charactersheet,{
-    foreignKey:'id'
+    foreignKey:'race_id'
 })
 
 Charactersheet.hasOne(Origin,{
-    foreignKey:'id'
+    foreignKey:'origin_id'
 })
 Origin.belongsTo(Charactersheet,{
-    foreignKey:'id'
+    foreignKey:'origin_id'
 })
 
 Charactersheet.hasOne(Focus,{
-    foreignKey:'id'
+    foreignKey:'focus_id'
 })
 Focus.belongsTo(Charactersheet,{
-    foreignKey:'id'
+    foreignKey:'focus_id'
 })
 
  module.exports = { User, Charactersheet, Race, Focus, FocusPower, Origin };

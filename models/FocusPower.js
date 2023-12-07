@@ -5,7 +5,7 @@ class FocusPower extends Model {}
 
 FocusPower.init(
     {
-        id: {
+        focusPower_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -15,7 +15,7 @@ FocusPower.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'focus',
-                key: 'id',
+                key: 'focus_id',
             },
         },
         power: {
