@@ -1,5 +1,5 @@
  const User = require('./User');
- const Charactersheet = require('./zcharactersheet');
+ const Charactersheet = require('./charactersheet');
  const Race = require('./race');
  const FocusPower = require('./FocusPower');
  const Focus = require('./Focus');
@@ -48,4 +48,4 @@ Charactersheet.belongsTo(Race, {
 });
 
 
- module.exports = { User, Race, Focus, FocusPower, Origin, Charactersheet };
+ module.exports = { User, Charactersheet, Race, Focus, FocusPower, Origin };
