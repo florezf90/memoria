@@ -11,145 +11,45 @@
         <!-- Carousel Container -->
         <div class="owl-carousel carousel1 owl-theme w-full max-w-3xl mt-16 mb-11">
             <!-- Carousel Items (Repeat the structure) -->
+            {{#each races as |race|}}
             <div class="item">
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Brinx.JPG" alt="Brinx" class="w-full custom-carousel-height p-6 object-cover">
+                    <img src="../assets/images/races/{{race.image}}" alt="{{race.name}}" class="w-full custom-carousel-height p-6 object-cover">
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Brinx</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2 class="text-xl font-bold mb-2">{{race.name}}</h2>
+                        <p>racial bonus - {{race.racial_bonus}}</p>
+                        <p>racial neg - {{race.racial_negs}}</p>
+                        <p>racial ability - {{race.racial_ability}}</p>
+                        <p>starting level - {{race.starting_level}}</p>
+                        <p>hp bonus - {{race.hp_bonus}}</p>
+                        <p>starting jinx - {{race.starting_jinx}}</p>
+                        <p>attack prowess - {{race.attack_prowess}}</p>
+                        <p>defense prowess - {{race.defense_prowess}}</p>
                     </div>
                 </div>
             </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Djinni.JPG" alt="Djinni" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Djinni</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Dwarn.jpg" alt="Dwarn" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Dwarn</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Elves.JPG" alt="Elves" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Elves</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Humans.jpg" alt="Humans" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Humans</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Musculus.JPG" alt="Musculus" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Musculus</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Polkans (2).jpg" alt="Polkans" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Polkans</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Potec (2).JPG" alt="Potec" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Potec</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Ryderz.JPG" alt="Ryderz" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Ryderz</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Skorc.jpg" alt="Skorc" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Skorc</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Treeton.JPG" alt="Treeton" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Treeton</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Tunkles.jpeg" alt="Tunkles" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Tunkles</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="../assets/images/races/Wereman.jpg" alt="Wereman" class="w-full custom-carousel-height p-6 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Brinx</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
+            {{/each}}
         </div>
 
         <!-- Paragraph Container -->
         <div class="custom-paragraph p-6 mb-11 pb-11 md:order-first text-center flex items-center flex-col justify-center">
             <h1 class="title text-4xl font-bold mb-6">memoria the Protectors </h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui.
+                 The story of the protector goes back to the days of early Memoria. A
+                prophecy handed down by a secret Order of Two-Leaves foretold of the first
+                protector Tratt. That was long before the Hall of Protectors was formed by
+                King Gregland. After Cataclsym, when several worlds came together in the
+                Great Merge the Protectors were needed more than ever. The Hall of
+                Protectors is always looking for new talent. And with the world so close
+                to peace it wont be long before the agents of The Darkness, The Forsaken
+                rise from the shadows again.
+                <br /><br />
+                Will you be a Swashbuckling Elv from the Swamps of Zadora? A novice
+                gunslinger from the dusty town Bradenton? A down on his luck Gladiator
+                from the stone streets of Ziun-Shao? Or possibly a Soldier in the Sapphire
+                Legion sworn to defend Capital City? With varied options for Race, Origin,
+                Focus, and Stats your build can be as unique as you. So remember, Choose
+                Wisely!
             </p>
         </div>
     </div>
@@ -166,11 +66,45 @@
 
         <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center w-1/2 mx-auto">
             <h1 class="title text-4xl font-bold  mt-16 mb-6">Character builder</h1>
-            <p >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui.
-            </p>
+            <h2>Stats - You have 15 points to assign as you see fit. (Average human has a 2 in each category)</h2>
+            <ul>
+                <li>Strength: Strength is added to the damage of all Melee Attacks. There
+                may also be additional checks based on Strength</li>
+                <li>Reflex: added to the damage of all Ranged Attacks. Certain acrobatic
+                manuevers may also require this.</li>
+                <li>Fortitude: reduces the amount of damage you take and adds . A damage
+                modifier. Certain phsyical checks also depend on this.</li>
+                <li>Intelligence: added to the damage of all Magic Attacks. Capacity to gain
+                knowledge, understand complex situations, and how NPCs engage with you.</li>
+                <li>Charisma: added to all Luck, Influence, and Seduce Rolls. NPCs and
+                others will interact with you differently depending on this number.</li>
+
+            </ul>
+
+            <p>HP stands for Hit Points. That total number of points your character has.
+                Once those are depleted the character is unconscious at HP 0 and fully dead
+                at HP of -10. Every protector starts out with a Base of D20 HP (Re-Rolling
+                anything under 10). Every level allows you to roll another D20 to add to
+                your existing HP pool.</p>
+
+            <h2>Roll Types</h2>
+            <ul>
+                <li>
+                <span class='dice'>⚅</span>Attack Roll: This is a roll of dice (determined
+                by Attack Prowress). An opponent would roll a Defense Roll to see if you
+                are succesful!</li>
+                <li><span class='dice'>⚅</span>Defense Roll: This is a roll of dice
+                (determined by Defense Prowress). You would need to beat an opponenets
+                Attack Roll or Critically Defend in order to avoid being hit</li>
+                <li><span class='dice'>⚅</span>Chance/Luck/Seduction Roll: Sometimes in game
+                there are things you would like to accomplish that is outside the scope of
+                standard Rolls. That's where chance Rolls come in. The DM will assign a
+                value 1-100 for success. You roll Percentiles (2 D10s) for success or
+                failure. Same for any diplomatic, influence, or seduction checks!</li>
+                <li><span class='dice'>⚅</span>Saving Rolls: Some actions require saves. For
+                Instance, Poison, Mind Altering Effects, or even Magic. These are based on
+                standard D20 plus applicable bonus(s).</li>
+            </ul>
         </div>
 
 
@@ -186,12 +120,11 @@
                         <h2 class="text-xl font-bold mb-2">Character example 1</h2>
                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                         <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
+                            <li>Race: Dwarn</li>
+                            <li>Origin: Eye</li>
+                            <li>Focus: Body</li>
                          </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>character background info...</p>
                     </div>
                 </div>
             </div>
@@ -203,12 +136,11 @@
                         <h2 class="text-xl font-bold mb-2">Character example 2</h2>
                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                          <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
+                            <li>Race: Elv</li>
+                            <li>Origin: Mind</li>
+                            <li>Focus: water</li>
                          </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>character background info...</p>
                     </div>
                 </div>
             </div>
@@ -220,12 +152,11 @@
                         <h2 class="text-xl font-bold mb-2">Character example 3</h2>
                           <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                            <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
+                            <li>Race: Humans</li>
+                            <li>Origin: Divine</li>
+                            <li>Focus: light</li>
                          </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>character background info...</p>
                     </div>
                 </div>
             </div>
@@ -237,12 +168,11 @@
                         <h2 class="text-xl font-bold mb-2">Character example 4</h2>
                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                           <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
+                            <li>Race: Musculus</li>
+                            <li>Origin: Body</li>
+                            <li>Focus: body</li>
                          </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>character background info...</p>
                     </div>
                 </div>
             </div>
@@ -259,22 +189,20 @@
 
             <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center w-1/2 mx-auto">
             <h1 class="title text-4xl font-bold  mt-16 mb-6">Focus</h1>
-            <p >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui.
+            <p>
+            Start by picking a single Focus.  You start with 2 powers plus any that may be given to you by Race or Origin.
             </p>
-        </div>
+            </div>
 
-     <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
+    <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
     <!-- Carousel Container -->
-    <div class="owl-carousel carousel3 owl-theme w-full max-w-3xl mt-16 p-5">
+        <div class="owl-carousel carousel3 owl-theme w-full max-w-3xl mt-16 p-5">
         <!-- Carousel Items (Repeat the structure) -->
-
-        <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            {{#each focuses as |focus|}}
+            <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">focus 1</h2>
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">{{focus.title}}</h2>
                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                         <ul class="list-disc pl-4 mb-2">
                             <li>Feature 1</li>
@@ -282,103 +210,10 @@
                             <li>Feature 3</li>
                             <li>Feature 4</li>
                          </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
             </div>
-
-             <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">focus 2</h2>
-                        <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                         <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-             <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">focus 3</h2>
-                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                           <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-         <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">focus 4</h2>
-                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                          <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-                         <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">focus 5</h2>
-                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                           <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-                         <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">focus 6</h2>
-                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                           <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-                         <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">focus 7</h2>
-                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                           <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
+            {{/each}}
         </div>
     
     </div>
@@ -393,80 +228,6 @@
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 p-16 my-16">
 
-     <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
-    <!-- Carousel Container -->
-    <div class="owl-carousel carousel2 owl-theme w-full max-w-3xl mt-16 p-5">
-        <!-- Carousel Items (Repeat the structure) -->
-
-        <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Origin 1</h2>
-                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                        <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-             <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Origin 2</h2>
-                        <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                         <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-             <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Origin 3</h2>
-                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                           <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-
-         <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Origin 4</h2>
-                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-                          <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
-                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    </div>
-
-
-
     <div class="lg:col-span-1 lg:self-center">
         <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center w-1/2 mx-auto">
             <h1 class="title text-4xl font-bold mt-16 mb-6">Origin</h1>
@@ -478,6 +239,37 @@
                 ratione aut in. Qui.
             </p>
         </div>
+    </div>
+
+    <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
+    <!-- Carousel Container -->
+    <div class="owl-carousel carousel2 owl-theme w-full max-w-3xl mt-16 p-5">
+        <!-- Carousel Items (Repeat the structure) -->
+        {{#each origins as |origin|}}
+            <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">{{origin.name}}</h2>
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                        <ul class="list-disc pl-4 mb-2">
+                            <li>level 1 adv - {{origin.level_1_advantage}}</li>
+                            <li>level 2 adv - {{origin.level_2_advantage}}</li>
+                            <li>level 3 adv - {{origin.level_3_advantage}}</li>
+                            <li>level 4 adv - {{origin.level_4_advantage}}</li>
+                            <li>level 5 adv - {{origin.level_5_advantage}}</li>
+                            <li>level 6 adv - {{origin.level_6_advantage}}</li>
+                            <li>level 7 adv - {{origin.level_7_advantage}}</li>
+                            <li>level 8 adv - {{origin.level_8_advantage}}</li>
+                            <li>level 9 adv - {{origin.level_9_advantage}}</li>
+                            <li>level 10 adv - {{origin.level_10_advantage}}</li>
+                            <li>weapon proficiency - {{origin.weapon_proficiency}}</li>
+                            <li>starting package - {{origin.starting_package}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+    </div>
     </div>
 </div>
 
@@ -496,9 +288,9 @@
         <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center w-1/2 mx-auto">
             <h1 class="title text-4xl font-bold  mt-16 mb-6">Mision</h1>
             <p >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui.
+                Our mission with this website was to help bring Ryans idea to life 
+                and create a hub to spread the ecitement that is memoria the protectors. 
+                This website provides people with the tools, rules, and lore necessary so they can get playing.
             </p>
         </div>
 
@@ -506,7 +298,7 @@
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-16 m-3 my-16 ">
     <!-- Card 1 -->
     <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-        <h2 class="text-xl font-semibold my-11 ">Card 1</h2>
+        <h2 class="text-xl font-semibold my-11 ">Luis Flores</h2>
         <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
@@ -524,7 +316,7 @@
 
     <!-- Card 2 -->
     <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-        <h2 class="text-xl font-semibold my-11">Card 2</h2>
+        <h2 class="text-xl font-semibold my-11">Noah Lara</h2>
         <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
@@ -542,7 +334,7 @@
 
     <!-- Card 3 -->
     <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-        <h2 class="text-xl font-semibold my-11">Card 3</h2>
+        <h2 class="text-xl font-semibold my-11">Ryan Fann</h2>
         <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">

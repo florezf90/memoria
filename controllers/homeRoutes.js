@@ -1,10 +1,23 @@
 const router = require("express").Router();
-const { User } = require("../models");
-const withAuth = require("../utils/auth");
+const { User, Focus, Origin, Race } = require("../models");
 
 router.get("/", async (req, res) => {
-  try {
-    res.render("homepage", { loggedin: req.session.logged_in });
+    try {
+      const focusData = await Focus.findAll();
+      const focuses = focusData.map((focus) => focus.get({ plain: true }));
+
+      const originData = await Origin.findAll();
+      const origins = originData.map((origin) => origin.get({ plain: true }));
+
+      const raceData = await Race.findAll();
+      const races = raceData.map((race) => race.get({ plain: true }));
+   
+      res.status(200).render("homepage", {
+        races,
+        origins,
+        focuses,
+        loggedin: req.session.logged_in,
+      });
   } catch (err) {
     res.status(500).json(err);
   }
