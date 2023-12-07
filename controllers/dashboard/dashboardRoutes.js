@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Charactersheet, Focus, Race, Origin, User } = require("../../models");
+const { findOne } = require("../../models/User");
 const withAuth = require("../../utils/auth");
 
 //gets all characters for user signed in TO SEPERATE PAGE
@@ -9,14 +10,16 @@ router.get('/', withAuth, async (req, res) => {
       console.log("get request to charactersheet");
       const charactersheetData = await Charactersheet.findAll({
         where: {user_id: req.session.user_id},
-        include: [{ model: Origin }, { model: Race }, { model: Focus }, {model: User, attributes:{exclude:['password']}}]
+        include: [{ model: Origin }, { model: Race }, { model: Focus } ]
       });
       const charactersheets = charactersheetData.map((charactersheet) => charactersheet.get({ plain: true }));
       console.log(charactersheets);
-     
+
         res.status(200).render("dashboard", {
         charactersheets,
-        loggedin: req.session.logged_in
+        loggedin: req.session.logged_in,
+        username: req.session.username,
+        email: req.session.email
         });
     } catch (err) {
       res.status(500).json(err);

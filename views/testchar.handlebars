@@ -1,44 +1,141 @@
-<div id="character-list">
-{{#each charactersheets as |charactersheet|}}
-<div id="character-div" class="border-solid border-2 border-indigo-600">
-<span>{{charactersheet.name}},  {{charactersheet.race_id}}, {{charactersheet.level}},  {{charactersheet.age}}, {{charactersheet.origin_id}} </span>    <button id="delete-char-btn" data-id="{{charactersheet.id}}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">delete</button>
-</div>
-{{/each}}
-</div>
-<div id="create-char">
-    <h1>new character</h1>
-    <input type="text" id="name" placeholder="name"></br>
-    <select name="race" id="race">
-        <option value="" disabled selected hidden>Choose race</option>
-        {{#each races as |race|}}
-                <option value= "{{race.race_id}}" >{{race.name}}</option>
-        {{/each}}
-    </select></br>
-    <input type="text" id="age" placeholder="age"></br>
-    <select name="origin" id="origin">
-        <option value="" disabled selected hidden>Choose origin</option>
-        {{#each origins as |origin|}}
-                <option value= "{{origin.origin_id}}" >{{origin.name}}</option>
-        {{/each}}
-    </select></br>
-    <select name="main_focus" id="main_focus">
-        <option value="" disabled selected hidden>Choose focus</option>
-        {{#each focuses as |focus|}}
-                <option value= "{{focus.focus_id}}" >{{focus.title}}</option>
-        {{/each}}
-    </select></br>
-    <input type="text" id="HP" placeholder="HP"></br>
-    <input type="text" id="level" placeholder="level"></br>
-    <input type="text" id="jinx" placeholder="jinx"></br>
-    <input type="text" id="strength" placeholder="strength"></br>
-    <input type="text" id="reflex" placeholder="reflex"></br>
-    <input type="text" id="fortitude" placeholder="fortitude"></br>
-    <input type="text" id="intelligence" placeholder="intelligence"></br>
-    <input type="text" id="charisma" placeholder="charisma"></br>
+<body class="font-sans p-8">
 
-    <button id="create-char-btn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">create new character</button>
-</div>
-<script src="/js/character.js"/>
+    <div id="create-char" class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md p-10 mt-16 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+
+        <div class="flex">
+
+            <!-- Group 1 -->
+            <div class="w-1/2 px-6 py-4">
+
+                <!-- Character Name Input -->
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2"> Character Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Race Select Input -->
+                <div class="mb-4">
+                    <label for="race" class="block text-gray-700 text-sm font-bold mb-2">Race</label>
+                    <select name="race" id="race"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                        <option value="" disabled selected hidden>Choose race</option>
+                        {{#each races as |race|}}
+                            <option value="{{race.race_id}}">{{race.name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <!-- Age Input -->
+                <div class="mb-4">
+                    <label for="age" class="block text-gray-700 text-sm font-bold mb-2"> Age</label>
+                    <input type="number" id="age" name="age"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Origin Select Input -->
+                <div class="mb-4">
+                    <label for="origin" class="block text-gray-700 text-sm font-bold mb-2">Origin</label>
+                    <select name="origin" id="origin"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                        <option value="" disabled selected hidden>Choose origin</option>
+                        {{#each origins as |origin|}}
+                            <option value="{{origin.origin_id}}">{{origin.name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                
+                <!-- Main Focus Select Input -->
+                <div class="mb-4">
+                    <label for="main_focus" class="block text-gray-700 text-sm font-bold mb-2">Main Focus</label>
+                    <select name="main_focus" id="main_focus"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                        <option value="" disabled selected hidden>Choose focus</option>
+                        {{#each focuses as |focus|}}
+                            <option value="{{focus.focus_id}}">{{focus.title}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <!-- HP Input -->
+                <div class="mb-4">
+                    <label for="HP" class="block text-gray-700 text-sm font-bold mb-2">HP</label>
+                    <input type="number" id="HP" name="HP"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Level Input -->
+                <div class="mb-4">
+                    <label for="level" class="block text-gray-700 text-sm font-bold mb-2">Level</label>
+                    <input type="number" id="level" name="level"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+            </div>
+
+            <!-- Group 2 -->
+            <div class="w-1/2 px-6 py-4">
+
+
+                <!-- Jinx Input -->
+                <div class="mb-4">
+                    <label for="jinx" class="block text-gray-700 text-sm font-bold mb-2">Jinx</label>
+                    <input type="number" id="jinx" name="jinx"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Strength Input -->
+                <div class="mb-4">
+                    <label for="strength" class="block text-gray-700 text-sm font-bold mb-2">Strength</label>
+                    <input type="number" id="strength" name="strength"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Reflex Input -->
+                <div class="mb-4">
+                    <label for="reflex" class="block text-gray-700 text-sm font-bold mb-2">Reflex</label>
+                    <input type="number" id="reflex" name="reflex"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Fortitude Input -->
+                <div class="mb-4">
+                    <label for="fortitude" class="block text-gray-700 text-sm font-bold mb-2">Fortitude</label>
+                    <input type="number" id="fortitude" name="fortitude"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Intelligence Input -->
+                <div class="mb-4">
+                    <label for="intelligence" class="block text-gray-700 text-sm font-bold mb-2">Intelligence</label>
+                    <input type="number" id="intelligence" name="intelligence"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+                <!-- Charisma Input -->
+                <div class="mb-4">
+                    <label for="charisma" class="block text-gray-700 text-sm font-bold mb-2">Charisma</label>
+                    <input type="number" id="charisma" name="charisma"
+                        class="w-full px-3 py-2 border rounded-md text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:shadow-md">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex items-center justify-center mt-6">
+            <button id="create-char-btn"
+                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 hover:shadow-md transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">Create New Character</button>
+        </div>
+
+    </div>
+
+</body>
+
+
+<script src="/js/character.js"></script>
 
 
 

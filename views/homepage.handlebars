@@ -110,7 +110,7 @@
 
     <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
         <!-- Carousel Container -->
-        <div class="owl-carousel carousel2 owl-theme w-full max-w-3xl mt-16">
+        <div class="owl-carousel carousel4 owl-theme w-full max-w-3xl mt-16">
             <!-- Carousel Items (Repeat the structure) -->
 
             <div class="item">
@@ -194,28 +194,29 @@
             </p>
             </div>
 
-
-
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 p-11 transition-all duration-300">
-    {{#each focuses as |focus|}}
-    <div class="h-auto rounded-lg bg-gray-200 my-11 p-6 transition-transform transform hover:scale-105">
-        <!-- Placeholder for Icon (replace with your actual icon) -->
-        
-        <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
-        
-        <!-- Title for Name -->
-        <h2 class="text-xl font-semibold mb-2">{{focus.title}}</h2>
-        
-        <!-- Unordered List of 4 Items -->
-        <ul class="list-disc pl-4">
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Feature 4</li>
-        </ul>
+    <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
+    <!-- Carousel Container -->
+        <div class="owl-carousel carousel3 owl-theme w-full max-w-3xl mt-16 p-5">
+        <!-- Carousel Items (Repeat the structure) -->
+            {{#each focuses as |focus|}}
+            <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">{{focus.title}}</h2>
+                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                        <ul class="list-disc pl-4 mb-2">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    
     </div>
-    {{/each}}
-</div>
 
 
 <span class="relative flex justify-center py-11 mt-16">
@@ -225,43 +226,51 @@
 </span>
 
 
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 p-16">
-    <div class="h-32 rounded-lg my-16">
-                <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center mx-auto w-full">
-            <h1 class="title text-4xl font-bold  mt-16 mb-6">oirgin</h1>
-            <p >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui.
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 p-16 my-16">
+
+    <div class="lg:col-span-1 lg:self-center">
+        <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center w-1/2 mx-auto">
+            <h1 class="title text-4xl font-bold mt-16 mb-6">Origin</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam
+                architecto incidunt distinctio eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut
+                in. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti
+                debitis nam architecto incidunt distinctio eos nesciunt quidem alias quam, ut ullam temporibus libero
+                ratione aut in. Qui.
             </p>
         </div>
+    </div>
 
-  </div>
-{{#each origins as |origin|}}
-<div class="h-auto rounded-lg bg-gray-200 p-6 transition-transform transform hover:scale-105 flex flex-col justify-start items-center py-11 my-16">
-    <!-- Placeholder for Icon (centered in the top) -->
-    <div class="w-12 h-12 bg-gray-300 rounded-full mb-4 self-center"></div>
-
-    <!-- Title for Name -->
-    <h2 class="text-xl font-semibold mb-2">{{origin.name}}</h2>
-    
-    <!-- Unordered List of Features -->
-    <ul class="list-disc pl-4 p-3 flex-grow">
-        <li>level 1 adv - {{origin.level_1_advantage}}</li>
-        <li>level 2 adv - {{origin.level_2_advantage}}</li>
-        <li>level 3 adv - {{origin.level_3_advantage}}</li>
-        <li>level 4 adv - {{origin.level_4_advantage}}</li>
-        <li>level 5 adv - {{origin.level_5_advantage}}</li>
-        <li>level 6 adv - {{origin.level_6_advantage}}</li>
-        <li>level 7 adv - {{origin.level_7_advantage}}</li>
-        <li>level 8 adv - {{origin.level_8_advantage}}</li>
-        <li>level 9 adv - {{origin.level_9_advantage}}</li>
-        <li>level 10 adv - {{origin.level_10_advantage}}</li>
-        <li>weapon proficiency - {{origin.weapon_proficiency}}</li>
-        <li>starting package - {{origin.starting_package}}</li>
-    </ul>
-</div>
-{{/each}}
+    <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
+    <!-- Carousel Container -->
+    <div class="owl-carousel carousel2 owl-theme w-full max-w-3xl mt-16 p-5">
+        <!-- Carousel Items (Repeat the structure) -->
+        {{#each origins as |origin|}}
+            <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">{{origin.name}}</h2>
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                        <ul class="list-disc pl-4 mb-2">
+                            <li>level 1 adv - {{origin.level_1_advantage}}</li>
+                            <li>level 2 adv - {{origin.level_2_advantage}}</li>
+                            <li>level 3 adv - {{origin.level_3_advantage}}</li>
+                            <li>level 4 adv - {{origin.level_4_advantage}}</li>
+                            <li>level 5 adv - {{origin.level_5_advantage}}</li>
+                            <li>level 6 adv - {{origin.level_6_advantage}}</li>
+                            <li>level 7 adv - {{origin.level_7_advantage}}</li>
+                            <li>level 8 adv - {{origin.level_8_advantage}}</li>
+                            <li>level 9 adv - {{origin.level_9_advantage}}</li>
+                            <li>level 10 adv - {{origin.level_10_advantage}}</li>
+                            <li>weapon proficiency - {{origin.weapon_proficiency}}</li>
+                            <li>starting package - {{origin.starting_package}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+    </div>
+    </div>
 </div>
 
    <span class="relative flex justify-center pt-16 mt-16">
@@ -279,17 +288,17 @@
         <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center w-1/2 mx-auto">
             <h1 class="title text-4xl font-bold  mt-16 mb-6">Mision</h1>
             <p >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam architecto incidunt distinctio
-                eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut in. Qui.
+                Our mission with this website was to help bring Ryans idea to life 
+                and create a hub to spread the ecitement that is memoria the protectors. 
+                This website provides people with the tools, rules, and lore necessary so they can get playing.
             </p>
         </div>
 
         
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-16 m-3 my-16">
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-16 m-3 my-16 ">
     <!-- Card 1 -->
-    <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105">
-        <h2 class="text-xl font-semibold my-11 ">Card 1</h2>
+    <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+        <h2 class="text-xl font-semibold my-11 ">Luis Flores</h2>
         <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
@@ -306,8 +315,8 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105">
-        <h2 class="text-xl font-semibold my-11">Card 2</h2>
+    <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+        <h2 class="text-xl font-semibold my-11">Noah Lara</h2>
         <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
@@ -324,8 +333,8 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105">
-        <h2 class="text-xl font-semibold my-11">Card 3</h2>
+    <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+        <h2 class="text-xl font-semibold my-11">Ryan Fann</h2>
         <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
@@ -333,7 +342,7 @@
             <li>Task 2</li>
             <li>Task 3</li>
         </ol>
-        <div class="flex items-center space-x-2 justify-center">
+        <div class="flex items-center space-x-2 justify-center ">
             <!-- Replace these icons with your actual icons -->
             <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
             <div class="w-6 h-6 bg-green-500 rounded-full"></div>
@@ -355,14 +364,87 @@
             });
         });
 
-                $(document).ready(function(){
-            $('.carousel2').owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                nav: true,
-            });
+ $(document).ready(function(){
+        var owlOptions = {
+            nav: true
+        };
+
+        // Initialize Owl Carousel with different options based on screen size
+        if ($(window).width() < 768) {
+            owlOptions.items = 1;  // Display one item on small screens
+        } else {
+            owlOptions.items = 3;  // Display four items on larger screens
+        }
+
+        $('.carousel2').owlCarousel(owlOptions);
+
+        // Update Owl Carousel options on window resize
+        $(window).resize(function(){
+            if ($(window).width() < 768) {
+                owlOptions.items = 1;
+            } else {
+                owlOptions.items = 3;
+            }
+
+            $('.carousel2').owlCarousel('destroy').owlCarousel(owlOptions);
         });
+    });
+
+ $(document).ready(function(){
+        var owlOptions = {
+            margin: 10,
+            nav: true,
+        };
+
+        // Initialize Owl Carousel with different options based on screen size
+        if ($(window).width() < 768) {
+            owlOptions.items = 1;  // Display one item on small screens
+        } else {
+            owlOptions.items = 4;  // Display four items on larger screens
+        }
+
+        $('.carousel3').owlCarousel(owlOptions);
+
+        // Update Owl Carousel options on window resize
+        $(window).resize(function(){
+            if ($(window).width() < 768) {
+                owlOptions.items = 1;
+            } else {
+                owlOptions.items = 4;
+            }
+
+            $('.carousel3').owlCarousel('destroy').owlCarousel(owlOptions);
+        });
+    });
+
+
+    $(document).ready(function(){
+        var owlOptions = {
+            loop: true,
+            margin: 10,
+            nav: true,
+        };
+
+        // Initialize Owl Carousel with different options based on screen size
+        if ($(window).width() < 768) {
+            owlOptions.items = 1;  // Display one item on small screens
+        } else {
+            owlOptions.items = 2;  // Display four items on larger screens
+        }
+
+        $('.carousel4').owlCarousel(owlOptions);
+
+        // Update Owl Carousel options on window resize
+        $(window).resize(function(){
+            if ($(window).width() < 768) {
+                owlOptions.items = 1;
+            } else {
+                owlOptions.items = 2;
+            }
+
+            $('.carousel4').owlCarousel('destroy').owlCarousel(owlOptions);
+        });
+    });
     </script>
     <!--This is the front end Javascript-->
     <script src="./js/index.js"></script>

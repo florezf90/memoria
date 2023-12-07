@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body class="font-sans">
 
     <!-- Cards List -->
-<div class="flex flex-col items-center p-4">
+    <div class="flex flex-col items-center p-4">
         <!-- Main User Card -->
         <div class="w-80 bg-white rounded-lg overflow-hidden shadow-md mb-4 my-16 mx-auto">
             <div class="bg-gray-300 h-40 flex-shrink-0"></div>
             <div class="p-4 flex-col justify-between items-center">
-                <div class="text-xl font-bold m-3">@{{charactersheets.[0].user.username}}</div>
-                <div class="text-xl font-bold m-3"> {{charactersheets.[0].user.email}}</div>
-                <button onclick="location.href='/dashboard/new-character';" class="bg-blue-500 text-white rounded-md p-4">create new character</button>
+                <div class="text-xl font-bold m-3">@{{username}}</div>
+                <div class="text-xl font-bold m-3">{{email}}</div>
+                <button onclick="location.href='/dashboard/new-character';"
+                    class="bg-blue-500 text-white rounded-md p-4">Create New Character</button>
             </div>
         </div>
-</div>
-<div id="character-list">
+    </div>
+    <div id="character-list" class="flex flex-wrap justify-center items-center">
         {{#each charactersheets as |charactersheet|}}
-          <div class="w-full bg-white rounded-lg overflow-hidden shadow-md my-16">
-            <div class="bg-gray-300 h-40 flex-shrink-0 w-80 m-6">
-                <image src="/assets/images/races/{{charactersheet.race.image}}" alt="image of {{charactersheet.race.name}}"></image>
-            </div>
-            <div class="p-4 flex justify-between items-center m-6">
-                <div>
+            <div class="w-90 bg-white rounded-lg overflow-hidden shadow-md my-4 mx-4 flex flex-col sm:flex-row items-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+                <img src="/assets/images/races/{{charactersheet.race.image}}" alt="Image of {{charactersheet.race.name}}"
+                    class="w-64 h-full object-cover m-6">
+                <div class="p-4 flex-1">
                     <div class="text-xl font-bold mb-2">{{charactersheet.name}}</div>
-                    <ul class="flex space-x-4">
+                    <ul class="flex space-x-2 items-center">
                         <li>{{charactersheet.race.name}}</li>
                         <li>{{charactersheet.origin.name}}</li>
                         <li>{{charactersheet.focu.title}}</li>
                     </ul>
                 </div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 hover:text-gray-100 transition duration-300" id="delete-char-btn" data-id="{{charactersheet.id}}">Delete</button>
+                <button class="bg-red-500 text-white px-4 py-2 my-4 sm:my-0 sm:ml-auto sm:mr-10 rounded-md hover:bg-red-600 hover:text-gray-100 transition duration-300"
+                    id="delete-char-btn" data-id="{{charactersheet.id}}">Delete</button>
             </div>
-        </div>
         {{/each}}
-</div>
+    </div>
 </body>
-<script src="/js/character.js"/>
+<script src="/js/character.js"></script>
+
 </html>

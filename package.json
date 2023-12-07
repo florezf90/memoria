@@ -6,7 +6,8 @@
   "scripts": {
     "seed": "node seeds/seed.js",
     "test": "test.js",
-    "start": "node server.js"
+    "start": "node server.js",
+  "sequelize": "./node_modules/.bin/sequelize"
   },
   "author": "",
   "license": "ISC",
@@ -24,5 +25,8 @@
     "nodemon": "^3.0.1",
     "prettier": "^3.1.0",
     "sequelize": "^6.35.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
   }
 }
