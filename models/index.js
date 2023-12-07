@@ -42,4 +42,10 @@ Focus.belongsTo(Charactersheet,{
     foreignKey:'focus_id'
 })
 
+Charactersheet.belongsTo(Race, {
+  foreignKey: "race_id",
+  targetKey: "race_id",
+});
+
+
  module.exports = { User, Charactersheet, Race, Focus, FocusPower, Origin };
