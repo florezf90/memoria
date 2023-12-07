@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Charactersheet, Focus, Race, Origin, User } = require("../../models");
-const { findOne } = require("../../models/User");
 const withAuth = require("../../utils/auth");
 
 //gets all characters for user signed in TO SEPERATE PAGE
