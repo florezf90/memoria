@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/");
+    res.redirect("/",);
     return;
   }
 
@@ -26,10 +26,5 @@ router.get("/signup", (req, res) => {
   }
   res.render("signup");
 });
-
-router.get("/dashboard", withAuth, (req, res) => {
-  res.render("dashboard", { loggedin: req.session.logged_in } );
-});
-
 
 module.exports = router;

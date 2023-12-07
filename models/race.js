@@ -5,7 +5,7 @@ class Race extends Model {}
 
 Race.init(
   {
-    id: {
+    race_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

@@ -5,7 +5,7 @@ class Focus extends Model {}
 
 Focus.init(
     {
-        id: {
+        focus_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,

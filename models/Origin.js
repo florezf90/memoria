@@ -5,7 +5,7 @@ class Origin extends Model {}
 
 Origin.init(
   {
-    id: {
+    origin_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,

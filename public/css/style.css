@@ -59,6 +59,24 @@ main {
   color: white;
 }
 
+.list-disc {
+  list-style: none;
+}
+
+.contain-focus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  width: 40%;
+}
+
 .fa-dragon {
   animation: bounce 2s linear infinite;
 }
@@ -79,23 +97,6 @@ main {
   width: 100%;
   height: fit-content;
   display: flex;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: auto;
-  width: 90%;
-  border: 2px solid dodgerblue;
-  background: linear-gradient(
-    to bottom,
-    rgba(202, 202, 202, 0.541),
-    rgba(133, 214, 255, 0.63)
-  );
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
 }
 
 .card h2 {
@@ -180,7 +181,7 @@ main {
 }
 
 div .numbertext {
-  background-color: #bbb;
+  background-color: #ffffff;
   border-radius: 5px;
   border-top-left-radius: 15px;
 }
@@ -261,6 +262,18 @@ div .numbertext {
   border-radius: 50%;
 }
 
+.owl-nav {
+  text-align: center;
+  justify-content: center;
+}
+
+.owl-carousel span {
+  justify-content: center;
+  font-size: 50px;
+
+  margin: 10px;
+}
+
 /* These need to remain at the bottom to effectively enable dark mode */
 .dark {
   background: linear-gradient(to right, grey, rgb(46, 46, 46), black);
@@ -287,7 +300,6 @@ div .numbertext {
   }
 }
 
-
- .custom-carousel-height {
-            height: 650px;
-        }
+.custom-carousel-height {
+  height: 650px;
+}

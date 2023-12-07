@@ -28,7 +28,7 @@ Charactersheet.init({
     allowNull: false,
     references: {
       model: "race",
-      key: "id",
+      key: "race_id",
     },
   },
   age: {
@@ -40,7 +40,7 @@ Charactersheet.init({
     allowNull: false,
     references: {
       model: "origin",
-      key: "id",
+      key: "origin_id",
     },
   },
   main_focus_id: {
@@ -48,7 +48,7 @@ Charactersheet.init({
     allowNull: false,
     references: {
       model: "focus",
-      key: "id",
+      key: "focus_id",
     },
   },
   HP: {
