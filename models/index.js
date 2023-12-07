@@ -1,5 +1,5 @@
  const User = require('./User');
- const Charactersheet = require('./charactersheet');
+ const Charactersheet = require('./zcharactersheet');
  const Race = require('./race');
  const FocusPower = require('./FocusPower');
  const Focus = require('./Focus');
@@ -42,4 +42,10 @@ Focus.belongsTo(Charactersheet,{
     foreignKey:'focus_id'
 })
 
- module.exports = { User, Charactersheet, Race, Focus, FocusPower, Origin };
+Charactersheet.belongsTo(Race, {
+  foreignKey: "race_id",
+  targetKey: "race_id",
+});
+
+
+ module.exports = { User, Race, Focus, FocusPower, Origin, Charactersheet };
