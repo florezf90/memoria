@@ -25,7 +25,7 @@ const raceData = [
     "starting_jinx": 30,
     "attack_prowess": 'D12',
     "defense_prowess": 'D6',
-    "image": 'Djinii.JPG',
+    "image": 'Djinni.JPG',
   },
 
   {
