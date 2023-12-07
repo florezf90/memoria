@@ -1,4 +1,4 @@
-const { User } = require('../../memoria/models');
+const { User } = require('../models');
 
 const userData =[
   {

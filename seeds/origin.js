@@ -1,4 +1,4 @@
-const { Origin } = require('../../memoria/models');
+const { Origin } = require('../models');
 
 const originData = [
   {
