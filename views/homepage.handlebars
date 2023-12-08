@@ -117,7 +117,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="../assets/images/races/Dwarn.jpg" alt="Dwarn" class="w-full custom-carousel-height p-6 object-cover">
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Character example 1</h2>
+                        <h2 class="text-xl font-bold mb-2">Nightshade</h2>
                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                         <ul class="list-disc pl-4 mb-2">
                             <li>Race: Dwarn</li>
@@ -133,7 +133,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="../assets/images/races/Elves.JPG" alt="Elves" class="w-full custom-carousel-height p-6 object-cover">
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Character example 2</h2>
+                        <h2 class="text-xl font-bold mb-2">Twilightscale</h2>
                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                          <ul class="list-disc pl-4 mb-2">
                             <li>Race: Elv</li>
@@ -149,7 +149,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
                     <img src="../assets/images/races/Humans.jpg" alt="Humans" class="w-full custom-carousel-height p-6 object-cover">
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Character example 3</h2>
+                        <h2 class="text-xl font-bold mb-2">Crystalwing</h2>
                           <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                            <ul class="list-disc pl-4 mb-2">
                             <li>Race: Humans</li>
@@ -165,7 +165,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md ">
                     <img src="../assets/images/races/Musculus.JPG" alt="Musculus" class="w-full custom-carousel-height p-6 object-cover">
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2">Character example 4</h2>
+                        <h2 class="text-xl font-bold mb-2">Drizzlethorn</h2>
                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                           <ul class="list-disc pl-4 mb-2">
                             <li>Race: Musculus</li>
@@ -194,29 +194,91 @@
             </p>
             </div>
 
-    <div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
+<div class="col-span-2 md:col-span-1 flex justify-center items-center p-4">
     <!-- Carousel Container -->
-        <div class="owl-carousel carousel3 owl-theme w-full max-w-3xl mt-16 p-5">
+    <div class="owl-carousel carousel3 owl-theme w-full max-w-3xl mt-16 p-5">
         <!-- Carousel Items (Repeat the structure) -->
-            {{#each focuses as |focus|}}
-            <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+
+        <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 p-2 text-center">{{focus.title}}</h2>
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Unfocused</h2>
                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                         <ul class="list-disc pl-4 mb-2">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
-                            <li>Feature 4</li>
+                            <li class="py-6 px-3 text-center">Sustenance: No longer requires eating or drinking</li>
+                <li class="py-6 px-3 text-center">First Strike: Can attack first withot initiative. Turn order then clockwise that turn</li>
                          </ul>
                     </div>
                 </div>
             </div>
-            {{/each}}
+
+                    <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Mind</h2>
+                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                        <ul class="list-disc pl-4 mb-2">
+                            <li class="py-6  px-3 text-center">Relection: Reflect a target's attack back to them.  Acts as Attack of Opportunity towards target. </li>
+                <li class="py-6 px-3 text-center">Boomerang: Your thrown weapon will return back to you much like a boomerang.</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+             <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Light</h2>
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                         <ul class="list-disc pl-4 mb-2">
+                             <li class="py-6 px-3 text-center">Light Strike: Generate and Manipulate concentrated Beams of Light Energy that can be thrown. </li>
+                <li class="py-6 px-3 text-center">Shield of Light: Create a field of Light Energy that can deflect or absorb incoming attacks.</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+             <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Fire</h2>
+                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                           <ul class="list-disc pl-4 mb-2">
+                            <li class="py-6 px-3 text-center">Combustion: Able to power small Combustion or Steam devices/engines.  </li>
+                <li class="py-6 px-3 text-center">Pyrokinetic Strike: Project bursts of fire from Hands or Eyes (must choose one option when gained and it cannot be changed)</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+         <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Mind</h2>
+                         <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                          <ul class="list-disc pl-4 mb-2">
+                           <li class="py-6 px-3 text-center">Allied Influence: Absorb the Power of another Protector by Touch. Only 1 Power is retained at a time. </li>
+                <li class="py-6 px-3 text-center">Ward of Protection: Summon a transparent gem-shaped Shield that will take damage. </li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+                         <div class="item transition-transform transform m-2 transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-2 p-2 text-center">Body</h2>
+                          <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
+                           <ul class="list-disc pl-4 mb-2">
+                            <li class="py-6 px-3 text-center">Relection: Reflect a target's attack back to them.  Acts as Attack of Opportunity towards target.  </li>
+                <li class="py-6 px-3 text-center">Boomerang: Your thrown weapon will return back to you much like a boomerang.</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     
     </div>
+
 
 
 <span class="relative flex justify-center py-11 mt-16">
@@ -232,11 +294,9 @@
         <div class="custom-paragraph p-6 md:order-first text-center flex items-center flex-col justify-center w-1/2 mx-auto">
             <h1 class="title text-4xl font-bold mt-16 mb-6">Origin</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti debitis nam
-                architecto incidunt distinctio eos nesciunt quidem alias quam, ut ullam temporibus libero ratione aut
-                in. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores quod deleniti
-                debitis nam architecto incidunt distinctio eos nesciunt quidem alias quam, ut ullam temporibus libero
-                ratione aut in. Qui.
+                Basically every person has an origin.  Whether your past was mainly built by using strenght it would be body, more mental accutity it would be mind, it would be spiritul divine, and the eye is for like eye hand coordination.  These shape our character by giving them a starting package that will generally work and then shape their future by givinging them a new advantage every level.
+7:10
+Focus are powers bestowed by the Flame himself
             </p>
         </div>
     </div>
@@ -252,18 +312,9 @@
                         <h2 class="text-xl font-bold mb-2 p-2 text-center">{{origin.name}}</h2>
                             <div class="w-12 h-12 bg-gray-300 rounded-full mb-4"></div>
                         <ul class="list-disc pl-4 mb-2">
-                            <li>level 1 adv - {{origin.level_1_advantage}}</li>
-                            <li>level 2 adv - {{origin.level_2_advantage}}</li>
-                            <li>level 3 adv - {{origin.level_3_advantage}}</li>
-                            <li>level 4 adv - {{origin.level_4_advantage}}</li>
-                            <li>level 5 adv - {{origin.level_5_advantage}}</li>
-                            <li>level 6 adv - {{origin.level_6_advantage}}</li>
-                            <li>level 7 adv - {{origin.level_7_advantage}}</li>
-                            <li>level 8 adv - {{origin.level_8_advantage}}</li>
-                            <li>level 9 adv - {{origin.level_9_advantage}}</li>
-                            <li>level 10 adv - {{origin.level_10_advantage}}</li>
-                            <li>weapon proficiency - {{origin.weapon_proficiency}}</li>
-                            <li>starting package - {{origin.starting_package}}</li>
+                            <li class="p-5 text-center">level 1 adv - {{origin.level_1_advantage}}</li>
+                            <li class="p-5 text-center">weapon proficiency - {{origin.weapon_proficiency}}</li>
+                            <li class="p-5 text-center">starting package - {{origin.starting_package}}</li>
                         </ul>
                     </div>
                 </div>
@@ -298,55 +349,82 @@
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-16 m-3 my-16 ">
     <!-- Card 1 -->
     <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
-        <h2 class="text-xl font-semibold my-11 ">Luis Flores</h2>
-        <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
+        <h2 class="text-xl font-semibold my-11 ">Luis Florez</h2>
+        <div class="w-40 h-40  rounded-full mb-4 mx-auto"><img src="../assets/images/webpage/T05G4TQ5Y01-U05MSFK2ZH8-a8de702568f3-512.jpg" alt="luisflorez"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
-            <li>Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>
+            <li class="p-2 text-center">Page Desing ( handlebars, Tailwind CSS and OWL.carousel )</li>
+            <li class="p-2 text-center">support Static Javascript </li>
+            <li class="p-2 text-center">debugging Routes and public Javascript</li>
         </ol>
         <div class="flex items-center space-x-2 justify-center">
             <!-- Replace these icons with your actual icons -->
-            <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
-            <div class="w-6 h-6 bg-green-500 rounded-full"></div>
-            <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+ <div class="flex items-center space-x-2 justify-center">
+    <!-- Email icon -->
+    <a href="mailto:florezf90@gmail.com" class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- GitHub icon -->
+    <a href="https://github.com/florezf90" class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
+
         </div>
     </div>
 
     <!-- Card 2 -->
     <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
         <h2 class="text-xl font-semibold my-11">Noah Lara</h2>
-        <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
+        <div class="w-40 h-40  mb-4 mx-auto"> <img src="../assets/images/webpage/piggyz.jpg" alt=""></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
-            <li>Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>
+            <li class="p-2 text-center">Most of application Routes</li>
+            <li class="p-2 text-center"> Designed Static javascript--</li>
+            <li class="p-2 text-center">Desgined models and Seed debugging</li>
         </ol>
         <div class="flex items-center space-x-2 justify-center">
             <!-- Replace these icons with your actual icons -->
-            <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
-            <div class="w-6 h-6 bg-green-500 rounded-full"></div>
-            <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+<div class="flex items-center space-x-2 justify-center">
+    <!-- Email icon -->
+    <a href="mailto:n_lara01@yahoo.com" class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- GitHub icon -->
+    <a href="https://github.com/N-lara" class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
+
         </div>
     </div>
 
     <!-- Card 3 -->
     <div class="h-auto rounded-lg bg-gray-200 p-4 text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:border hover:border-gray-700 transition-all duration-300">
         <h2 class="text-xl font-semibold my-11">Ryan Fann</h2>
-        <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 mx-auto"></div>
+        <div  class="w-40 h-40 bg-gray-300 rounded-full mb-4 mx-auto"><img src="../assets/images/webpage/headshot-80sback.png" alt="ryann"></div>
         <h3 class="text-lg font-medium mb-2 text-left">Tasks Done:</h3>
         <ol class="list-decimal pl-4 mb-4 text-left">
-            <li>Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>
+            <li class="p-2 text-center">Application Concept and artwork</li>
+            <li class="p-2 text-center"> Database Models</li>
+            <li class="p-2 text-center">Basic HTML support</li>
         </ol>
         <div class="flex items-center space-x-2 justify-center ">
             <!-- Replace these icons with your actual icons -->
-            <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
-            <div class="w-6 h-6 bg-green-500 rounded-full"></div>
-            <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+<div class="flex items-center space-x-2 justify-center">
+    <!-- Email icon -->
+    <a href="mailto:ryan.fann@gmail.com" class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- GitHub icon -->
+    <a href="https://github.com/8BitGinger" class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
+
         </div>
     </div>
 </div>
