@@ -4,45 +4,44 @@
 
 ### Memoria the Protectors is a brand-new Table Top Role Playing Game or TTRPG for short. This page will allow users to sign up, log in, and have access to the content and features listed below:
 
-- Pictures of the Unique Races
-- Maps
-- Downloadable Documents like:
-  - Character Sheet
-  - Character Builder Cheat Sheet
-  - Origin Page
-  - Focus List
-  - Starter Adventure
+- Pictures of the Unique Races --More coming soon
+- Maps --coming soon
+- Downloadable Documents like: --coming soon
+  - Character Sheet -- coming soon
+  - Character Builder Cheat Sheet -- coming soon
+  - Origin Page -- coming soon
+  - Focus List -- coming soon
+  - Starter Adventure -- coming soon
 - Rules
   - Combat
   - Movement
   - Stats
   - Dice Checks
 - Online Character Builder
-  - Create and Save up to 3 Characters
+  - Create and Save Characters 
 - User Dashboard
-  - Manage Saved Characters
-  - Change Password
+  - Manage Saved Characters 
+  - Change Password - coming soon
 
 ### The Goal of Memoria vs existing TTRPG is to get a character built quicker without losing our on customization and variety.  No one wants to spend 1 to 2 hours building a character before having any fun with them.  It's designed to provide a giant open world setting 
 
 ## Table of Contents
 
-1.  [Screenshots](#screenshot)
+1.  [Usage](#usage)
 2.  [Installation](#install)
 3.  [Technologies](#tech)
-4.  [Usage](#usage)
-5.  [Roadmap](#roadmap)
-6.  [Contributions](#contribute)
-7.  [Contact Us](#contact)
+4.  [Roadmap](#roadmap)
+5.  [Contact Us](#contact)
 
 ---
 
 <p id="screenshot"></p>
 
-## Screenshots
+## Usage
 
-![screenshot](./public/assets/images/webpage/Placeholder%20Image.png)
-![screenshot](./public/assets/images/webpage/Placeholder%20Image.png)
+This website is designed to be used to assist people with getting started playing Memoria the protectors and give them the lore information and rules neccessary to be able to play this game with your friends.
+![home screenshot](./public/assets/images/webpage/Screenshot.png)
+![dashboard screenshot](./public/assets/images/webpage/Dashboard-Screenshot.png)
 
 ---
 
@@ -50,11 +49,7 @@
 
 ## Installation
 
-Install Instructions
-
-```
-code goes here
-```
+There is no installation you just need to go to our website at https://mmemoria-4c92f159ec61.herokuapp.com/ 
 
 <p id="tech"></p>
 
@@ -102,31 +97,24 @@ code goes here
 
 <p id="roadmap"></p>
 
-## Roadmap
+## Roadmap for future development
 
 - We would like to add the other 70+ Races from additional continents
-- More advanced Map functions that will give you City Demographics upon clicking the picture of the city
+- Map functions that will give you City Demographics upon clicking the picture of the city
 - Some additional functionality by saving to PDF when creating a starter character
+- Pages with more info on every race, origin, anod focus
 - A section where other gamers can find each other by zip code
 - More free content and Adventures!
 - Premium Content to allow Leveling up of Character and Additional Character Slots
 
 ---
 
-<p id="contribute"></p>
-
-## Contributions
-
-List contributions instructions here
-
----
-
-<p id="contact"></p>
+<p id="contact">contact Ryan Fann if you are interested in working on this project</p>
 
 ## Contact Us
 
 [Ryan Fann](mailto:ryan.fann@gmail.com)
 
-[Luis Flores]()
+[Luis Flores](mailto:florezf90@gmail.com)
 
-[Noah Lara]()
+[Noah Lara](mailto:n_lara01@ayhoo.com)
