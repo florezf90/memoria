@@ -6,7 +6,7 @@
   "scripts": {
     "seed": "node seeds/seed.js",
     "test": "test.js",
-    "start": "node server.js",
+    "start": "node server.js & npm run seed",
   "sequelize": "./node_modules/.bin/sequelize"
   },
   "author": "",
